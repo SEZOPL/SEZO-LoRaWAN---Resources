@@ -6,6 +6,7 @@ Currently we provide decoders for TheThingsNetwork and Chirpstack network server
 ## Firmware update via USB
 ###	Prerequisites
 •	Download latest Firmware update package from: [here](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/archive/main.zip)
+
 •	Unzip package and go to FW_UPDATE folder.
 
 ###	Preparation to firmware update
