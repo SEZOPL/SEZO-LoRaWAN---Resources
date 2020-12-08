@@ -37,5 +37,7 @@ Currently we provide decoders for TheThingsNetwork and Chirpstack network server
 
 ### Preparation to usage
 •	Disconnect USB cable
+
 •	Turn switch into “RUN” position
+
 •	Reset device with “RST” button or turn it off and on.
