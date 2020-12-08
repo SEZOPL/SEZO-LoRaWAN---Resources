@@ -5,32 +5,36 @@
 Currently we provide decoders for TheThingsNetwork and Chirpstack network servers. Please check javascript decoders in [Network Server decoders](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/tree/main/Network%20server%20decoders)
 ## Firmware update via USB
 ###	Prerequisites
-ï	Download latest Firmware update package from: [here](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/archive/main.zip)
-ï	Unzip package and go to FW_UPDATE folder.
+‚Ä¢	Download latest Firmware update package from: [here](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/archive/main.zip)
+‚Ä¢	Unzip package and go to FW_UPDATE folder.
 
 ###	Preparation to firmware update
-ï	Switch off SEZO if its turned on, open enclosure and set ìRUN/PROGî switch into ìPROGî position, connect SEZO to PC using USB cable, proper setting is showed on picture below.
+‚Ä¢	Switch off SEZO if its turned on, open enclosure and set ‚ÄúRUN/PROG‚Äù switch into ‚ÄúPROG‚Äù position, connect SEZO to PC using USB cable, proper setting is showed on picture below.
 
 ![Connection](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/blob/main/FW_UPDATE/Data_Base/connection.jpg)
  
-ï	Turn ON SEZO using ON/OFF button,
-ï	Run SEZO_FW_Updater.exe software from SEZO_FW_UPDATE folder,
+‚Ä¢	Turn ON SEZO using ON/OFF button,
+‚Ä¢	Run SEZO_FW_Updater.exe software from SEZO_FW_UPDATE folder,
 
 ### Firmware update procedure
  
-ï	Choose desired firmware typing version number.
+‚Ä¢	Choose desired firmware typing version number.
 
 ![Versions](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/blob/main/FW_UPDATE/Data_Base/ver.png) 
 
-ï	Confirm chosen firmware by typing ìYESî. If you want to make change type ìNOî and make another firmware version choice. 
+‚Ä¢	Confirm chosen firmware by typing ‚ÄúYES‚Äù. If you want to make change type ‚ÄúNO‚Äù and make another firmware version choice. 
 
 ![Confirmation](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/blob/main/FW_UPDATE/Data_Base/yes.png) 
 
-ï	If connection is successful there should be relevant information. Wait for about 30 seconds for update to succeed.
+‚Ä¢	If connection is successful there should be relevant information. Wait for about 30 seconds for update to succeed.
 
 ![Connected](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/blob/main/FW_UPDATE/Data_Base/connect.png)
 
- ï Successful procedure is confirmed with "UpdateOk" line.
+ ‚Ä¢ Successful procedure is confirmed with "UpdateOk" line.
  
  ![Firmware Done](https://github.com/SEZOPL/SEZO-LoRaWAN-Resources/blob/main/FW_UPDATE/Data_Base/done.png)
 
+### Preparation to usage
+‚Ä¢	Disconnect USB cable
+‚Ä¢	Turn switch into ‚ÄúRUN‚Äù position
+‚Ä¢	Reset device with ‚ÄúRST‚Äù button or turn it off and on.
