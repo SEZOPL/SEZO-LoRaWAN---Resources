@@ -1,9 +1,9 @@
-﻿
+
 //Decode decodes an array of bytes into an object.
 //  - fPort contains the LoRaWAN fPort number
 //  - bytes is an array of payload, e.g. [225, 230, 255, 0]
 // The function must return an object, e.g. {"temperature": 22.5}
-function Decoder(bytes, port) {
+function Decode(fport, bytes) {
     /**
      * @reference https://github.com/myDevicesIoT/cayenne-docs/blob/master/docs/LORA.md
      *
