@@ -59,7 +59,12 @@ function Decoder(bytes, port) {
  			208: {'size': 2, 'name': 'EXT_temperature', 'readable_name': 'External Temperature Sensor', 'signed': true , 'divisor': 10,},
             209: {'size': 1, 'name': 'EXT_humidity', 'readable_name': 'External Humidity Sensor', 'signed': false, 'divisor': 2,},
 			210: {'size': 2, 'name': 'EXT_barometer', 'readable_name': 'Barometer', 'signed': false, 'divisor': 10,},
-			211: {'size': 1, 'name': 'IAQ_accuracy', 'readable_name': 'IAQ accuracy', 'signed': false, 'divisor': 1,}
+			211: {'size': 1, 'name': 'IAQ_accuracy', 'readable_name': 'IAQ accuracy', 'signed': false, 'divisor': 1,},
+			212: {'size': 2, 'name': 'temperature_heater', 'readable_name': 'Heater Temperature Sensor', 'signed': true , 'divisor': 10,},
+			213: {'size': 1, 'name': 'humidity_heater', 'readable_name': 'Heater Humidity Sensor', 'signed': false, 'divisor': 2,},
+			214: {'size': 2, 'name': 'ex_temperature', 'readable_name': 'External Temperature Sensor', 'signed': true , 'divisor': 10,},
+			215: {'size': 1, 'name': 'ex_humidity', 'readable_name': 'External Humidity Sensor', 'signed': false, 'divisor': 2,},
+			216: {'size': 2, 'name': 'CO2', 'readable_name': 'CO2', 'signed': false, 'divisor': 1,}
 		};
 
     function arrayToDecimal(stream, is_signed, divisor) {
@@ -118,6 +123,11 @@ function Decoder(bytes, port) {
 			case 209:  // External Relative Humidity
 			case 210:  // External Pressure
 			case 211:  // External Pressure
+			case 212:  // Heater temperature
+			case 213:  // Heater humidity
+			case 214:  // External temperature
+			case 215:  // External humidity
+			case 216:  // CO2 [ppm]
 			var s_value = arrayToDecimal(bytes.slice(i, i+s_size),
             is_signed     = sensor_types[s_type].signed,
             divisor = sensor_types[s_type].divisor);
