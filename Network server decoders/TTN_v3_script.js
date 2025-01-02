@@ -61,10 +61,16 @@ function Decoder(bytes, port) {
 			210: {'size': 2, 'name': 'EXT_barometer', 'readable_name': 'Barometer', 'signed': false, 'divisor': 10,},
 			211: {'size': 1, 'name': 'IAQ_accuracy', 'readable_name': 'IAQ accuracy', 'signed': false, 'divisor': 1,},
 			212: {'size': 2, 'name': 'temperature_heater', 'readable_name': 'Heater Temperature Sensor', 'signed': true , 'divisor': 10,},
-			213: {'size': 1, 'name': 'humidity_heater', 'readable_name': 'Heater Humidity Sensor', 'signed': false, 'divisor': 2,},
-			214: {'size': 2, 'name': 'ex_temperature', 'readable_name': 'External Temperature Sensor', 'signed': true , 'divisor': 10,},
-			215: {'size': 1, 'name': 'ex_humidity', 'readable_name': 'External Humidity Sensor', 'signed': false, 'divisor': 2,},
-			216: {'size': 2, 'name': 'CO2', 'readable_name': 'CO2', 'signed': false, 'divisor': 1,}
+      213: {'size': 1, 'name': 'humidity_heater', 'readable_name': 'Heater Humidity Sensor', 'signed': false, 'divisor': 2,},
+      214: {'size': 2, 'name': 'ex_temperature', 'readable_name': 'External Temperature Sensor', 'signed': true , 'divisor': 10,},
+      215: {'size': 1, 'name': 'ex_humidity', 'readable_name': 'External Humidity Sensor', 'signed': false, 'divisor': 2,},
+      216: {'size': 2, 'name': 'CO2', 'readable_name': 'CO2', 'signed': false, 'divisor': 1,},
+      217: {'size': 4, 'name': 'Frames_counter', 'readable_name': 'Frames Counter', 'signed': false, 'divisor': 1,},
+      218: {'size': 4, 'name': 'Firmware_version', 'readable_name': 'Firmware version', 'signed': false, 'divisor': 1,},
+      219: {'size': 2, 'name': 'PM1', 'readable_name': 'PM1', 'signed': false, 'divisor': 1,},
+      220: {'size': 2, 'name': 'PM2_5', 'readable_name': 'PM2_5', 'signed': false, 'divisor': 1,},
+      221: {'size': 2, 'name': 'PM4', 'readable_name': 'PM4', 'signed': false, 'divisor': 1,},
+      222: {'size': 2, 'name': 'PM10', 'readable_name': 'PM10', 'signed': false, 'divisor': 1,}
 		};
 
     function arrayToDecimal(stream, is_signed, divisor) {
@@ -128,6 +134,12 @@ function Decoder(bytes, port) {
 			case 214:  // External temperature
 			case 215:  // External humidity
 			case 216:  // CO2 [ppm]
+			case 217:  //Frames counter
+			case 218:  //FW version
+			case 219:  //PM1
+			case 220:  //PM2.5
+			case 221:  //PM14 
+			case 222:  //PM10
 			var s_value = arrayToDecimal(bytes.slice(i, i+s_size),
             is_signed     = sensor_types[s_type].signed,
             divisor = sensor_types[s_type].divisor);
